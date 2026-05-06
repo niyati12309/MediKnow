@@ -2,21 +2,11 @@
 
 > **"When in doubt, scan it out"**
 
-Mediknow is a modern SwiftUI iOS app that helps users verify medicine authenticity by scanning packaging and checking trust scores.
-
----
-
-## Screenshots
-
-| Splash | Home | Scan Result | History | Profile |
-|--------|------|-------------|---------|---------|
-| Clean animated launch | Scan + Upload actions | Trust score gauge | Filterable history | User stats + settings |
-
----
+Mediknow is a modern app that helps users verify medicine authenticity by scanning packaging and checking trust scores.
 
 ## Features
 
-- **Medicine Scanner** — Simulate a camera scan or image upload
+- **Medicine Scanner** — a camera scan or image upload
 - **Trust Score** — Color-coded percentage (Green / Yellow / Red)
 - **Verification Details** — QR Code Check, Packaging Analysis, OCR Text Match
 - **Scan History** — Searchable, filterable list of past scans
@@ -29,7 +19,6 @@ Mediknow is a modern SwiftUI iOS app that helps users verify medicine authentici
 - **Language:** Swift 5.9+
 - **UI Framework:** SwiftUI (iOS 17+)
 - **Navigation:** NavigationStack
-- **Data:** Mock/Dummy data (no backend required)
 - **Icons:** SF Symbols
 
 ---
@@ -38,24 +27,24 @@ Mediknow is a modern SwiftUI iOS app that helps users verify medicine authentici
 
 ```
 Mediknow/
-├── MediknowApp.swift          # App entry point with splash logic
+├── MediknowApp.swift          
 ├── Models/
-│   ├── ScanResult.swift       # ScanResult, CheckDetail, TrustLevel models
-│   └── UserProfile.swift      # UserProfile and SettingsOption models
+│   ├── ScanResult.swift       
+│   └── UserProfile.swift      
 ├── Data/
-│   └── MockData.swift         # All dummy/mock data arrays
+│   └── MockData.swift         
 ├── Components/
-│   ├── ScoreBadge.swift       # Reusable color-coded score badge
-│   ├── MedicineCard.swift     # Medicine list card with icon + score
-│   ├── DetailCheckCard.swift  # Verification check detail row
-│   └── StatCard.swift         # Profile stats card
+│   ├── ScoreBadge.swift       
+│   ├── MedicineCard.swift     
+│   ├── DetailCheckCard.swift  
+│   └── StatCard.swift        
 └── Views/
-    ├── ContentView.swift      # Tab bar controller
-    ├── SplashView.swift       # Animated launch screen
-    ├── HomeView.swift         # Home with scan/upload actions
-    ├── ScanResultView.swift   # Animated trust score + check details
-    ├── HistoryView.swift      # Searchable/filterable scan history
-    └── ProfileView.swift      # User stats, settings, about
+    ├── ContentView.swift    
+    ├── SplashView.swift       
+    ├── HomeView.swift         
+    ├── ScanResultView.swift  
+    ├── HistoryView.swift      
+    └── ProfileView.swift      
 ```
 
 ---
@@ -104,15 +93,6 @@ Mediknow/
 | 75 – 100    | Genuine    | Green  |
 | 40 – 74     | Uncertain  | Yellow |
 | 0 – 39      | Fake       | Red    |
-
----
-
-## Extending the App
-
-To connect a real backend:
-- Replace `MockData.swift` arrays with API calls using `URLSession` or `Alamofire`
-- Add camera scanning using `AVFoundation` or `VisionKit`
-- Implement barcode/QR reading with `Vision` framework
 
 ---
 
